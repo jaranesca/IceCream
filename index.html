@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ice Cream Order Form</h1>
+        <form id="orderForm">
+            <label for="scoops">Number of Scoops:</label>
+            <input type="number" id="scoops" name="scoops" min="1" value="1" required><br><br>
+
+            <fieldset>
+                <label><input type="radio" name="container" value="cone" checked> Cone</label><br>
+                <label><input type="radio" name="container" value="cup"> Cup</label><br>
+            </fieldset><br>
+
+
+            <fieldset>
+                <legend>Toppings</legend>
+                <label><input type="checkbox" name="topping" value="sprinkles"> Sprinkles $0.50</label><br>
+                <label><input type="checkbox" name="topping" value="hotfudge"> Hot Fudge $1.25</label><br>
+                <label><input type="checkbox" name="topping" value="whippedcream"> Whipped Cream $0.25</label><br>
+                <label><input type="checkbox" name="topping" value="cherry"> Cherry $0.25</label><br>
+                <label><input type="checkbox" name="topping" value="nuts"> Nuts $0.25</label><br>
+            </fieldset><br>
+
+            <button type="button" onclick="calculatePrice()">Submit Order</button>
+        </form>
+
+        <div id="priceOutput">
+            <h2>Order Summary</h2>
+            <p id="basePrice">Base Price: $0.00</p>
+            <p id="tax">TAX: $0.00</p>
+            <p id="totalDue">Total Due: $0.00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
